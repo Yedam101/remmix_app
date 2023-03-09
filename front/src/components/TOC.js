@@ -1,16 +1,43 @@
-import { Component } from 'react';
+import { Button } from '@chakra-ui/react';
+import { Textarea } from '@chakra-ui/react'
+import React, { useState } from "react";
 
-class TOC extends Component {
-    render() {
-      return(
-        <nav>
-          <ul>
-              <li><a href="1.html">HTML</a></li>
-              <li><a href="2.html">CSS</a></li>
-              <li><a href="3.html">JS</a></li>
-          </ul>
-        </nav>
-      )
-    }
-  }
-export default TOC;
+function RegisterPage() {
+  const [TitleValue, setTitleValue] = useState("");
+  const [ContentValue, setContentValue] = useState("");
+
+  const onTitleChange = (event) => {
+    setTitleValue(event.currentTarget.value);
+  };
+  console.log(TitleValue);
+
+  const onContentChange = (event) => {
+    setContentValue(event.currentTarget.value);
+  };
+  console.log(ContentValue);
+  return (
+    <div>
+      <form onSubmit>
+        <br />
+        <label>Title: </label>
+        <input
+          onChange={onTitleChange}
+          value={TitleValue}
+          type="text"
+          name="title"
+        />
+        <hr></hr>
+        <div>
+          <Textarea
+            onChange={onContentChange}
+            value={ContentValue}
+            name="content"
+          />
+        </div>
+        <Button onClick>Submit</Button>
+      </form>
+    </div>
+  );
+}
+
+export default RegisterPage;
