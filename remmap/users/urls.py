@@ -1,6 +1,6 @@
-from django.urls import path
-from . import views
+# from django.urls import path
+# from . import views
 
-urlpatterns = [
-    path("kakao", views.KakaoLogIn.as_view()),
-]
+# urlpatterns = [
+#     path("kakao", views.KakaoLogIn.as_view()),
+# ]
