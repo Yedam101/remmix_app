@@ -2,7 +2,6 @@
 import { Component } from 'react';
 
 import RegisterPage from './components/TOC';
-import Content from './components/Content';
 
 
 
@@ -19,7 +18,6 @@ class App extends Component {
     return (
       <div className='App'>
         <RegisterPage></RegisterPage>
-        <Content></Content>
       </div>
     )
   }

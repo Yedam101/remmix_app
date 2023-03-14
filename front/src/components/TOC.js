@@ -1,4 +1,4 @@
-import { Button } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 import { Textarea } from '@chakra-ui/react'
 import React, { useState } from "react";
 
@@ -15,6 +15,8 @@ function RegisterPage() {
     setContentValue(event.currentTarget.value);
   };
   console.log(ContentValue);
+  const value = ContentValue
+
   return (
     <div>
       <form onSubmit>
@@ -36,6 +38,7 @@ function RegisterPage() {
         </div>
         <Button onClick>Submit</Button>
       </form>
+      <h2> {value} </h2>
     </div>
   );
 }
